@@ -70,7 +70,7 @@ const MapComponent: React.FC = () => {
     if (drawType) {
       draw = new Draw({
         source: source,
-        type: drawType // Set draw type dynamically
+        type: drawType as any // Set draw type dynamically
       });
       map.addInteraction(draw);
     }
@@ -87,7 +87,7 @@ const MapComponent: React.FC = () => {
         if (geometry instanceof Point) {
           coordinates = [geometry.getCoordinates()];
         } else if (geometry instanceof LineString || geometry instanceof Polygon) {
-          coordinates = geometry.getCoordinates();
+          coordinates = geometry.getCoordinates() as any;
         }
 
         if (coordinates) {
