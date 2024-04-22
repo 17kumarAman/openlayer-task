@@ -115,7 +115,7 @@ const MapComponent: React.FC = () => {
   return (
     <div className='p-3 mt-4'>
       <div ref={mapContainer} className="map-container border border-black my-1" style={{ width: '100%', height: '400px' }}></div>
-      <div className='bg-black text-white flex gap-2 p-2'>
+      <div className='bg-black text-white flex gap-2 p-2 justify-between'>
         <button onClick={() => handleDrawTypeChange('Point')}>Draw Point</button>
         <button onClick={() => handleDrawTypeChange('LineString')}>Draw Line</button>
         <button onClick={() => handleDrawTypeChange('Polygon')}>Draw Polygon</button>
